@@ -3,7 +3,17 @@
 [![Documentation Status](https://readthedocs.org/projects/xlrd/badge/?version=latest)](http://xlrd.readthedocs.io/en/latest/?badge=latest)
 [![PyPI version](https://badge.fury.io/py/xlrd.svg)](https://badge.fury.io/py/xlrd)
 
-### xlrdinc
+# Fork of PyPI package `xlrd`
+
+Name of new package: `xlrdinc`
+
+We are currently using a lot of Python-UNO stuff, but have found the original libraries a little unmaintained (or at least slow in responding to bug reports). We do ask that you file issues directly on this repo instead of the original repo we forked from; we have no control over that original repo, and don't foresee timely response from the maintainers of that repo.
+
+---
+
+# Original README...
+
+### xlrd
 
 Please read this before using this library: https://groups.google.com/d/msg/python-excel/P6TjJgFVjMI/g8d0eWxTBQAJ
 
@@ -72,3 +82,25 @@ for rx in range(sh.nrows):
 *   Ksenia Marasanova: sample Macintosh and non-Latin1 files, alpha testing
 *   Backporting to Python 2.1 was partially funded by Journyx - provider of timesheet and project accounting solutions (http://journyx.com/).
 *   Provision of formatting information in version 0.6.1 was funded by Simplistix Ltd (http://www.simplistix.co.uk/)
+
+---
+
+# Help Us In Open-Source?
+
+Please help us by alerting us to any related slow projects we should be forking actively.
+
+We are an atypical Singaporean company with a very large pool of engineers we trained for cutting-edge software work. (Singaporean culture completely eschews technical skills in favor of supervisory/managerial jobs; we would argue "non-job" instead.) Our founders are linguists, which was how we trained (and were trained by, believe it or not) non-English engineers in East Asian regions.
+
+Owing to our rapidly expanding knowledge bases (in multiple human languages), we have a cost-efficiency of "*third-world prices for Silicon Valley quality*" (with all due respect to the world's engineers for that "*Silicon Valley*" pop culture reference). We're cost-efficient; we don't run sweatshops.
+
+We will put in substantial engineering effort to maintain and refine any abandoned (and useful) open-source projects, transparently and competently.
+
+# Our Background, Our Gaps
+
+Our main aim is to stem the relentless hacking of our Singaporean systems by weaning from our reliance on outsource vendors (who often are backed by foreign actors with a myriad of unanticipated intents). Our IT expenditure is skyrocketing as we purchase product after product, only to come back and find those products misconfigured by unskilled managers (who hired unskilled engineers).
+
+We have a background in being outsourced vendors ourselves. We are the outsourced R&D arm for several technologically active countries. We are also desperately looking to learn how we can outsource safely. We do admit we had warped our Business Process Outsourcing (BPO) into Business Responsibility Outsourcing over decades.
+
+Talent retention is also something we are dying to learn. We are having problems motivating our students to learn engineering skills (newly minted engineers spend office hours reading books on "*How to be a good CEO*"). Those who do learn competently get enticed to foreign countries. We're literally being hollowed out of technological capabilities.
+
+Help us. And we will help you in return.
