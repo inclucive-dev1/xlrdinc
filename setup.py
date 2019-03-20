@@ -1,14 +1,15 @@
 from setuptools import setup
+from setuptools import find_packages
 
-from xlrd.info import __VERSION__
+from xlrdinc.info import __VERSION__
 
 setup(
-    name = 'xlrd',
+    name = 'xlrdinc',
     version = __VERSION__,
-    author = 'John Machin',
-    author_email = 'sjmachin@lexicon.net',
-    url = 'http://www.python-excel.org/',
-    packages = ['xlrd'],
+    author = 'Inclucive',
+    author_email = '',
+    url = 'http://www.inclucive.com/',
+    packages = find_packages(),
     scripts = [
         'scripts/runxlrd.py',
     ],

@@ -9,7 +9,7 @@ Please read this before using this library: https://groups.google.com/d/msg/pyth
 
 **Purpose**: Provide a library for developers to use to extract data from Microsoft Excel (tm) spreadsheet files. It is not an end-user tool.
 
-**Author**: John Machin, Lingfo Pty Ltd (sjmachin@lexicon.net)
+**Author**: Inclucive (forked from John Machin's work)
 
 **Licence**: BSD-style (see licences.py)
 
