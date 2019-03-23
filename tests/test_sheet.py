@@ -3,8 +3,8 @@
 import types
 from unittest import TestCase
 
-import xlrd
-from xlrd.timemachine import xrange
+import xlrdinc as xlrd
+from xlrdinc.timemachine import xrange
 
 from .base import from_this_dir
 
@@ -47,6 +47,14 @@ class TestSheet(TestCase):
     def test_ncols(self):
         sheet = self.book.sheet_by_index(SHEETINDEX)
         self.assertEqual(sheet.ncols, NCOLS)
+
+    def test_colx_to_int(self):
+        sheet = self.book.sheet_by_index(SHEETINDEX)
+        Sheet = sheet.__class__
+        self.assertEqual(2, Sheet.colx_to_int('C'))
+        self.assertEqual(27, Sheet.colx_to_int('AB'))
+        self.assertEqual(15, Sheet.colx_to_int('15'))
+        self.assertEqual(16, Sheet.colx_to_int(16))
 
     def test_cell(self):
         sheet = self.book.sheet_by_index(SHEETINDEX)
