@@ -15,13 +15,16 @@ We are currently using a lot of Python-UNO stuff, but have found the original li
 
 - [Testing](#testing)
   - [Quick Test --- Single Python Version](#quick-test-----single-python-version)
+  - [Test Against Your Application](#test-against-your-application)
 - [Original README](#original-readme)
 - [Help Us In Open-Source?](#help-us-in-open-source)
 - [Our Background, Our Gaps](#our-background-our-gaps)
 
-# Testing
+(TOC manually generated courtesy of [this generator](https://imthenachoman.github.io/nGitHubTOC/).)
 
-To encourage contributions, we clearly state for your convenience here how to test the contributions you make.
+# Testing and Contributing
+
+To encourage contributions, we clearly state for your convenience here how to test the contributions you make. Pull requests are very welcome, and will be rapidly processed; we operate Agile and favor small contained iterative improvements.
 
 ## Quick Test --- Single Python Version
 
@@ -55,6 +58,19 @@ At the top-level folder of this project, this command executes all tests discove
     # Equivalent to `python3 -m unittest discover'
 
 For [test discovery](https://docs.python.org/3/library/unittest.html#unittest-test-discovery) to work, your tests must conform to certain conventions. These conventions can be easily gleaned from numerous examples in this project's test cases.
+
+## Test Against Your Application
+
+While we encourage you to fully document your contributions via self-explanatory unit tests within this project/package, we do understand that you may need to test within more complex scenarios in your own application of this package.
+
+To build a `pip install`-able distribution to deploy into your own virtual Python environment, at the top-level folder of this project:
+
+    rm -rf dist # in case previous builds are still lying around
+    python3 setup.py bdist_wheel
+
+In your virtual environment, deploy via:
+
+    pip install dist/<filename>.whl
 
 ---
 
