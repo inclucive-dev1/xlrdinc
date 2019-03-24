@@ -2,8 +2,8 @@
 
 import unittest
 
-import xlrd
-from xlrd.timemachine import UNICODE_LITERAL
+import xlrdinc as xlrd
+from xlrdinc.timemachine import UNICODE_LITERAL
 
 from .base import from_this_dir
 

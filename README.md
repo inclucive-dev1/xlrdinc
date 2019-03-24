@@ -1,13 +1,50 @@
 [![Build Status](https://travis-ci.org/python-excel/xlrd.svg?branch=master)](https://travis-ci.org/python-excel/xlrd)
 [![Coverage Status](https://coveralls.io/repos/github/python-excel/xlrd/badge.svg?branch=master)](https://coveralls.io/github/python-excel/xlrd?branch=master)
 [![Documentation Status](https://readthedocs.org/projects/xlrd/badge/?version=latest)](http://xlrd.readthedocs.io/en/latest/?badge=latest)
-[![PyPI version](https://badge.fury.io/py/xlrd.svg)](https://badge.fury.io/py/xlrd)
+[![PyPI version](https://badge.fury.io/py/xlrdinc.svg)](https://badge.fury.io/py/xlrdinc)
 
 # Fork of PyPI package `xlrd`
 
 Name of new package: `xlrdinc`
 
 We are currently using a lot of Python-UNO stuff, but have found the original libraries a little unmaintained (or at least slow in responding to bug reports). We do ask that you file issues directly on this repo instead of the original repo we forked from; we have no control over that original repo, and don't foresee timely response from the maintainers of that repo.
+
+# Testing
+
+To encourage contributions, we clearly state for your convenience here how to test the contributions you make.
+
+## Quick Test --- Single Python Version
+
+### Virtual Environment
+
+Ensure your `virtualenv` package is up-to-date:
+
+    pip install --upgrade virtualenv
+
+Create a virtual environment via:
+
+    `virtualenv -p python3 <env-folder>`
+
+We suggest `~/xlrdinc-env` for `<env-folder>`. Test your contribution with the latest Python 3; this close to year 2020, we encourage you to save the effort in testing against Python 2. Let us help you test against Python 2.
+
+Activate your environment via:
+
+    `source <env-folder>/bin/activate`.
+
+### Single Test
+
+At the top-level folder of this project, this command executes a single test `test_colx_to_int` in test case `TestSheet` residing in module `test.test_sheet`. In Python speak, that module is the file `tests/test_sheet.py`.
+
+    python3 -m unittest tests.test_sheet.TestSheet.test_colx_to_int
+
+## All Tests
+
+At the top-level folder of this project, this command executes all tests discovered.
+
+    python3 -m unittest
+    # Equivalent to `python3 -m unittest discover'
+
+For [test discovery](https://docs.python.org/3/library/unittest.html#unittest-test-discovery) to work, your tests must conform to certain conventions. These conventions can be easily gleaned from numerous examples in this project's test cases.
 
 ---
 

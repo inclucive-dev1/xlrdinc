@@ -4,7 +4,7 @@
 import sys
 from unittest import TestCase
 
-import xlrd
+import xlrdinc as xlrd
 
 from .base import from_this_dir
 
