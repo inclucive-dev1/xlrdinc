@@ -9,6 +9,16 @@ Name of new package: `xlrdinc`
 
 We are currently using a lot of Python-UNO stuff, but have found the original libraries a little unmaintained (or at least slow in responding to bug reports). We do ask that you file issues directly on this repo instead of the original repo we forked from; we have no control over that original repo, and don't foresee timely response from the maintainers of that repo.
 
+**Merging `.xlsx` and `.xls` Handling.** At some point soon, we will merge `.xlsx` handling packages (`openpyxl`, `xlsxwriter`, etc) into this project. We will ask the community for a new project name *after* that merge has been achieved.
+
+# Table of Contents
+
+- [Testing](#testing)
+  - [Quick Test --- Single Python Version](#quick-test-----single-python-version)
+- [Original README](#original-readme)
+- [Help Us In Open-Source?](#help-us-in-open-source)
+- [Our Background, Our Gaps](#our-background-our-gaps)
+
 # Testing
 
 To encourage contributions, we clearly state for your convenience here how to test the contributions you make.
@@ -23,13 +33,13 @@ Ensure your `virtualenv` package is up-to-date:
 
 Create a virtual environment via:
 
-    `virtualenv -p python3 <env-folder>`
+    virtualenv -p python3 <env-folder>
 
 We suggest `~/xlrdinc-env` for `<env-folder>`. Test your contribution with the latest Python 3; this close to year 2020, we encourage you to save the effort in testing against Python 2. Let us help you test against Python 2.
 
 Activate your environment via:
 
-    `source <env-folder>/bin/activate`.
+    source <env-folder>/bin/activate
 
 ### Single Test
 
@@ -37,7 +47,7 @@ At the top-level folder of this project, this command executes a single test `te
 
     python3 -m unittest tests.test_sheet.TestSheet.test_colx_to_int
 
-## All Tests
+### All Tests
 
 At the top-level folder of this project, this command executes all tests discovered.
 
