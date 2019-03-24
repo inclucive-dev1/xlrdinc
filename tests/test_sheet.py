@@ -56,6 +56,12 @@ class TestSheet(TestCase):
         self.assertEqual(15, Sheet.colx_to_int('15'))
         self.assertEqual(16, Sheet.colx_to_int(16))
 
+    def test_rowx_to_int(self):
+        sheet = self.book.sheet_by_index(SHEETINDEX)
+        Sheet = sheet.__class__
+        self.assertEqual(15, Sheet.colx_to_int('15'))
+        self.assertEqual(16, Sheet.colx_to_int(16))
+
     def test_cell(self):
         sheet = self.book.sheet_by_index(SHEETINDEX)
         self.assertNotEqual(xlrd.empty_cell, sheet.cell(0, 0))

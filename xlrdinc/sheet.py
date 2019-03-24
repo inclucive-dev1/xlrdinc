@@ -420,7 +420,7 @@ class Sheet(BaseObject):
     def rowx_to_int(rowx):
         "Converts decimal str to int for row specifiers."
         if isinstance(rowx, str):
-            if colx.isdecimal():
+            if rowx.isdecimal():
                 return int(rowx)
         return rowx
 
