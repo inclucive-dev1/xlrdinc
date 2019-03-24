@@ -2,9 +2,9 @@
 
 from unittest import TestCase
 
-from xlrd import open_workbook
-from xlrd.book import Book
-from xlrd.sheet import Sheet
+from xlrdinc import open_workbook
+from xlrdinc.book import Book
+from xlrdinc.sheet import Sheet
 
 from .base import from_this_dir
 

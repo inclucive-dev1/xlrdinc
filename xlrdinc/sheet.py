@@ -400,10 +400,36 @@ class Sheet(BaseObject):
         # self._put_cell_rows_appended = 0
         # self._put_cell_cells_appended = 0
 
+    def colx_to_int(colx):
+        """Converts alpha/decimal str to int for column specifiers.
+
+        Eg. 'AB' becomes 52.
+        """
+        if isinstance(colx, str):
+            if colx.isalpha():
+                result = 0
+                factor = 1
+                for char in colx[::-1]:
+                    result += (ord(char.upper()) - 64) * factor
+                    factor *= 26
+                colx = result - 1 # zero-based index
+            elif colx.isdecimal():
+                return int(colx)
+        return colx
+
+    def rowx_to_int(rowx):
+        "Converts decimal str to int for row specifiers."
+        if isinstance(rowx, str):
+            if colx.isdecimal():
+                return int(rowx)
+        return rowx
+
     def cell(self, rowx, colx):
         """
         :class:`Cell` object in the given row and column.
         """
+        rowx = Sheet.rowx_to_int(rowx)
+        colx = Sheet.colx_to_int(colx)
         if self.formatting_info:
             xfx = self.cell_xf_index(rowx, colx)
         else:
@@ -416,6 +442,8 @@ class Sheet(BaseObject):
 
     def cell_value(self, rowx, colx):
         "Value of the cell in the given row and column."
+        rowx = Sheet.rowx_to_int(rowx)
+        colx = Sheet.colx_to_int(colx)
         return self._cell_values[rowx][colx]
 
     def cell_type(self, rowx, colx):
@@ -424,6 +452,8 @@ class Sheet(BaseObject):
 
         Refer to the documentation of the :class:`Cell` class.
         """
+        rowx = Sheet.rowx_to_int(rowx)
+        colx = Sheet.colx_to_int(colx)
         return self._cell_types[rowx][colx]
 
     def cell_xf_index(self, rowx, colx):
@@ -433,6 +463,8 @@ class Sheet(BaseObject):
 
         .. versionadded:: 0.6.1
         """
+        rowx = Sheet.rowx_to_int(rowx)
+        colx = Sheet.colx_to_int(colx)
         self.req_fmt_info()
         xfx = self._cell_xf_indexes[rowx][colx]
         if xfx > -1:
@@ -465,12 +497,14 @@ class Sheet(BaseObject):
 
         .. versionadded:: 0.7.2
         """
+        rowx = Sheet.rowx_to_int(rowx)
         return len(self._cell_values[rowx])
 
     def row(self, rowx):
         """
         Returns a sequence of the :class:`Cell` objects in the given row.
         """
+        rowx = Sheet.rowx_to_int(rowx)
         return [
             self.cell(rowx, colx)
             for colx in xrange(len(self._cell_values[rowx]))
@@ -484,6 +518,9 @@ class Sheet(BaseObject):
         """
         Returns a slice of the types of the cells in the given row.
         """
+        rowx = Sheet.rowx_to_int(rowx)
+        start_colx = Sheet.colx_to_int(start_colx)
+        end_colx = Sheet.colx_to_int(end_colx)
         if end_colx is None:
             return self._cell_types[rowx][start_colx:]
         return self._cell_types[rowx][start_colx:end_colx]
@@ -492,6 +529,9 @@ class Sheet(BaseObject):
         """
         Returns a slice of the values of the cells in the given row.
         """
+        rowx = Sheet.rowx_to_int(rowx)
+        start_colx = Sheet.colx_to_int(start_colx)
+        end_colx = Sheet.colx_to_int(end_colx)
         if end_colx is None:
             return self._cell_values[rowx][start_colx:]
         return self._cell_values[rowx][start_colx:end_colx]
@@ -500,6 +540,9 @@ class Sheet(BaseObject):
         """
         Returns a slice of the :class:`Cell` objects in the given row.
         """
+        rowx = Sheet.rowx_to_int(rowx)
+        start_colx = Sheet.colx_to_int(start_colx)
+        end_colx = Sheet.colx_to_int(end_colx)
         nc = len(self._cell_values[rowx])
         if start_colx < 0:
             start_colx += nc
@@ -518,6 +561,9 @@ class Sheet(BaseObject):
         """
         Returns a slice of the :class:`Cell` objects in the given column.
         """
+        colx = Sheet.rowx_to_int(colx)
+        start_rowx = Sheet.colx_to_int(start_rowx)
+        end_rowx = Sheet.colx_to_int(end_rowx)
         nr = self.nrows
         if start_rowx < 0:
             start_rowx += nr
@@ -536,6 +582,9 @@ class Sheet(BaseObject):
         """
         Returns a slice of the values of the cells in the given column.
         """
+        colx = Sheet.rowx_to_int(colx)
+        start_rowx = Sheet.colx_to_int(start_rowx)
+        end_rowx = Sheet.colx_to_int(end_rowx)
         nr = self.nrows
         if start_rowx < 0:
             start_rowx += nr
@@ -554,6 +603,9 @@ class Sheet(BaseObject):
         """
         Returns a slice of the types of the cells in the given column.
         """
+        colx = Sheet.rowx_to_int(colx)
+        start_rowx = Sheet.colx_to_int(start_rowx)
+        end_rowx = Sheet.colx_to_int(end_rowx)
         nr = self.nrows
         if start_rowx < 0:
             start_rowx += nr

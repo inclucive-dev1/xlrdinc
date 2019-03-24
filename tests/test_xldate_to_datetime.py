@@ -6,7 +6,7 @@
 import unittest
 from datetime import datetime
 
-from xlrd import xldate
+from xlrdinc import xldate
 
 not_1904 = False
 is_1904 = True
