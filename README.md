@@ -46,7 +46,7 @@ Activate your environment via:
 
 ### Single Test
 
-At the top-level folder of this project, this command executes a single test `test_colx_to_int` in test case `TestSheet` residing in module `test.test_sheet`. In Python speak, that module is the file `tests/test_sheet.py`.
+At the top-level folder of this project, this command executes a single test `test_colx_to_int` in test case `TestSheet` residing in module `tests.test_sheet`. In Python speak, that module is the file `tests/test_sheet.py`.
 
     python3 -m unittest tests.test_sheet.TestSheet.test_colx_to_int
 
