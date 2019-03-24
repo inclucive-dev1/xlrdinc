@@ -19,6 +19,7 @@ We are currently using a lot of Python-UNO stuff, but have found the original li
 - [Original README](#original-readme)
 - [Help Us In Open-Source?](#help-us-in-open-source)
 - [Our Background, Our Gaps](#our-background-our-gaps)
+  - [Engineering Core](#engineering-core)
 
 (TOC manually generated courtesy of [this generator](https://imthenachoman.github.io/nGitHubTOC/).)
 
@@ -162,8 +163,18 @@ We will put in substantial engineering effort to maintain and refine any abandon
 
 Our main aim is to stem the relentless hacking of our Singaporean systems by weaning from our reliance on outsource vendors (who often are backed by foreign actors with a myriad of unanticipated intents). Our IT expenditure is skyrocketing as we purchase product after product, only to come back and find those products misconfigured by unskilled managers (who hired unskilled engineers).
 
-We have a background in being outsourced vendors ourselves. We are the outsourced R&D arm for several technologically active countries. We are also desperately looking to learn how we can outsource safely. We do admit we had warped our Business Process Outsourcing (BPO) into Business Responsibility Outsourcing over decades.
+We have a background in being outsourced vendors ourselves. We are the outsourced R&D arm for several technologically active countries. We are also desperately looking to learn how we can **outsource safely**. We do admit we had warped our Business Process Outsourcing (BPO) into Business Responsibility Outsourcing over decades.
 
-Talent retention is also something we are dying to learn. We are having problems motivating our students to learn engineering skills (newly minted engineers spend office hours reading books on "*How to be a good CEO*"). Those who do learn competently get enticed to foreign countries. We're literally being hollowed out of technological capabilities.
+**Talent retention** is also something we are dying to learn. We are having problems motivating our Singaporean students to learn engineering skills (newly minted engineers spend office hours reading books on "*How to be a good CEO*"). Those who do learn competently get enticed to foreign countries. We're literally being hollowed out of technological capabilities. All of our government agencies' C-level technology managers/executives do not know IT at all; we have literally zero better candidates.
+
+**No Better Options.** Consider that our government agencies' best candidates for C-level technology managers/execs are former Microsoft *business development* execs. Not once in Singapore's five decades of push for technological competence have we ever scored a real technologist. We can no longer rely solely on foreign imports of technologists, as we see an exponential increase in attacks/sabotage (sometimes even inadvertent self-sabotage) directed at our IT systems. You will undoubtedly read a lot about our IT "*misadventures*" in the news.
 
 Help us. And we will help you in return.
+
+## Engineering Core
+
+The business entities we set up (including inclucive.com) are run by engineers --- a fitting, if cliched, slogan for us would be "*created by engineers, for engineers*". We have zero senior managers/execs paid more than engineers. All of our revenue goes into feeding and growing our engineers, as evidenced by our exponentially growing knowledge bases (in various human languages). We will soon be publishing self-contained books packed with related segments of our knowledge bases, to further encourage our engineers to grow their competences. In short, our costs arise mainly from engineering efforts, with very little overheads (if any at all) from non-engineering facilitators.
+
+If you engage our services, you will get your money's worth, since our costs are solely engineering efforts. We will also encourage you to learn from the work we do for you, in the spirit of "*IT Infrastructure Ownership and Security*", though we will still fully respect your decision to focus solely on your non-IT related core business activities.
+
+If you feel keen to join our push for "*IT Infrastructure Ownership and Security*", we will more than welcome your engineering inputs and competence. We speak a huge variety of languages, so please feel free to show us your engineering expertise in whatever human language or expressions you feel comfortable with.
