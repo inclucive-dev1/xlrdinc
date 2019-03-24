@@ -13,7 +13,7 @@ We are currently using a lot of Python-UNO stuff, but have found the original li
 
 # Table of Contents
 
-- [Testing](#testing)
+- [Testing and Contributing](#testing-and-contributing)
   - [Quick Test --- Single Python Version](#quick-test-----single-python-version)
   - [Test Against Your Application](#test-against-your-application)
 - [Original README](#original-readme)
