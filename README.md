@@ -3,19 +3,24 @@
 [![Documentation Status](https://readthedocs.org/projects/xlrd/badge/?version=latest)](http://xlrd.readthedocs.io/en/latest/?badge=latest)
 [![PyPI version](https://badge.fury.io/py/xlrdinc.svg)](https://badge.fury.io/py/xlrdinc)
 
-# Fork of PyPI package `xlrd`
+# Pure Python `.xls` Reader
+
+Fork of PyPI package `xlrd`
 
 Name of new package: `xlrdinc`
 
-We are currently using a lot of Python-UNO stuff, but have found the original libraries a little unmaintained (or at least slow in responding to bug reports). We do ask that you file issues directly on this repo instead of the original repo we forked from; we have no control over that original repo, and don't foresee timely response from the maintainers of that repo.
+We are currently using a lot of Python-UNO stuff, but still need non-UNO read access for lower overheads and possibly higher speed. We have found the original `xlrd` a little unmaintained (or at least slow in responding to bug reports). We do ask that you file issues directly on this repo instead of the original repo we forked from; we have no control over that original repo, and don't foresee timely response from the maintainers of that repo.
 
-**Merging `.xlsx` and `.xls` Handling.** At some point soon, we will merge `.xlsx` handling packages (`openpyxl`, `xlsxwriter`, etc) into this project. We will ask the community for a new project name *after* that merge has been achieved.
+**Merging `.xlsx` and `.xls` Readers.** At some point soon, we will merge `.xlsx` handling packages (`openpyxl`, `xlsxwriter`, etc) into this project. We will ask the community for a new project name *after* that merge has been achieved.
+
+**Ignoring `.xlsx` and `xls` Writers.** For now, we're using LibreOffice to do the writing (interfaced via `pyoo`). Since our workflow involves a lot more reading than writing, we will live with the overhead (memory, unlikely computational) of running LibreOffice alongside our Python scripts. We don't want to replicate LibreOffice's writing functions, but may still port them over to `xlwt` if the community sees a need.
 
 # Table of Contents
 
 - [Testing and Contributing](#testing-and-contributing)
   - [Quick Test --- Single Python Version](#quick-test-----single-python-version)
   - [Test Against Your Application](#test-against-your-application)
+- [Why Still `.xls`?](#why-still-xls)
 - [Original README](#original-readme)
 - [Help Us In Open-Source?](#help-us-in-open-source)
 - [Our Background, Our Gaps](#our-background-our-gaps)
@@ -72,6 +77,16 @@ To build a `pip install`-able distribution to deploy into your own virtual Pytho
 In your virtual environment, deploy via:
 
     pip install dist/<filename>.whl
+
+# Why Still `.xls`?
+
+**Prior Investments.** Many organizations had invested a lot of money into developing templates when working with older Excel versions. Upgrading these templates to `.xlsx`, a function provided in newer Excel versions, came with a (often well-warranted) warning that *formatting could be lost*.
+
+**IT Incapabilities.** Organizations today often have various handicaps related to IT competence (we speak only for ourselves in Singapore; details [further below](#our-background-our-gaps)). Hence, migrating to LibreOffice (or even to newer Excel) isn't always an available option. Even if a capable IT department facilitates such migration, communication and handling of the transition isn't an expected skill in IT professionals. (Singaporeans do have communication handicaps in general: we're bilingually mediocre.)
+
+**Political/Corporate Culture.** Certain cultures may preclude *learning, adaptation, and growth*, thus rendering LibreOffice an insurmountably steep learning curve (assuming newer Excel versions are not affordable). Again, we speak only for ourselves in Singapore. Singapore has a culture of paternalism which was efficacious in Mr. Lee Kuan Yew's time, but is sadly still necessary today; successful paternalism lulls the general populace (including our top management personnel) into a lifelong resistance against *learning, adaptation, and growth*, ensuring our continued reliance on paternalism. Paternalism also leads to our worship of our *chain of command*, with workers admiring and emulating their oppressive superiors, thus perpetuating our unfortunate culture which is the root cause of our *learning handicap*.
+
+These problems mostly stem from human traits and are here to stay; humans are built for entrenched efficiency ("*hey! `.xls` still works!*") as much as for innovation. We would wish that Microsoft officially removes support for `.xls` from Excel 2007 onwards, but it doesn't make business sense to intentionally create *business continuity* problems for old customers (unless LibreOffice/OpenOffice never existed).
 
 ---
 
