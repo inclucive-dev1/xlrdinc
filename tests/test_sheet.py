@@ -3,8 +3,8 @@
 import types
 from unittest import TestCase
 
-import xlrd
-from xlrd.timemachine import xrange
+import xlrdinc as xlrd
+from xlrdinc.timemachine import xrange
 
 from .base import from_this_dir
 

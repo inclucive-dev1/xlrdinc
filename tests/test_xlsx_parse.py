@@ -5,7 +5,7 @@
 
 import unittest
 
-import xlrd
+import xlrdinc as xlrd
 
 from .base import from_this_dir
 
